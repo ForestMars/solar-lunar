@@ -1,4 +1,4 @@
-# 6585-independent.py - Orbital clock showing 365’s dual role as scaling factor and conversion unit. 
+# 365-scalar.py - Orbital clock showing 365’s dual role as scaling factor and conversion unit. 
 #      Independent cycles converging numerically, not via transformation.
 #      Earth’s rhythms as the non-arbitrary root, with a probabilistic glow for resonance.
 __author__ = 'Forest Mars'
