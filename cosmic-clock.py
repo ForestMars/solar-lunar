@@ -28,6 +28,9 @@ LONG_TERM_CYCLE = 6585.3 * SOLAR_YEAR  # Days in 6585.3 years
 # Animation scaling: 1 second = 100 years
 TIME_SCALE = 100 * SOLAR_YEAR / 1000  # Days per millisecond (100 years per second)
 
+# Clock speed constant
+FPS = 60  # Frames per second
+
 # Main loop
 running = True
 time_days = 0  # Current time in days
@@ -100,7 +103,7 @@ while running:
 
     # Update display
     pygame.display.flip()
-    clock.tick(60)
+    clock.tick(FPS)
 
 # Cleanup
 pygame.quit()
