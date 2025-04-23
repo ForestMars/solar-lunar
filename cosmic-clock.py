@@ -1,5 +1,6 @@
 import pygame
 import math
+import argparse
 
 # Initialize Pygame
 pygame.init()
@@ -29,7 +30,15 @@ LONG_TERM_CYCLE = 6585.3 * SOLAR_YEAR  # Days in 6585.3 years
 TIME_SCALE = 100 * SOLAR_YEAR / 1000  # Days per millisecond (100 years per second)
 
 # Clock speed constant
-FPS = 60  # Frames per second
+FPS = 6  # Default frames per second
+
+# Parse command-line argument for frame rate
+parser = argparse.ArgumentParser(description="Cosmic Clock with adjustable frame rate")
+parser.add_argument("--fps", type=int, help="Frame rate (frames per second)")
+args = parser.parse_args()
+
+# Set frame rate based on argument or default
+frame_rate = args.fps if args.fps is not None else FPS
 
 # Main loop
 running = True
@@ -103,7 +112,7 @@ while running:
 
     # Update display
     pygame.display.flip()
-    clock.tick(FPS)
+    clock.tick(frame_rate)
 
 # Cleanup
 pygame.quit()
