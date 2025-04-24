@@ -1,5 +1,5 @@
 
-# dual-clock.py - Constrasts Earth’s scalar match with the counterfactual’s failure, using two clocks and Fourier insets.
+# dual-clock_.py - Constrasts Earth’s scalar match with the counterfactual’s failure, using two clocks and Fourier insets.
 __author__ = 'Forest Mars'
 __version__ = '1.0.0' 
 __all__ = []
@@ -11,7 +11,7 @@ import numpy as np
 pygame.init()
 width, height = 800, 600
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Cosmic Clocks: A Hypothesis Undone")
+pygame.display.set_caption("Cosmic Clocks: The Approximation’s Triumph and Fall")
 clock = pygame.time.Clock()
 
 WHITE = (255, 255, 255)
@@ -155,17 +155,17 @@ while running:
     time_years = time_days / SOLAR_YEAR
     text = font.render(f"Time: {time_years:.1f} Earth years", True, WHITE)
     screen.blit(text, (10, 10))
-    caption = font.render("Earth: Scalar match at 6585.3 days and years.", True, WHITE)
+    caption = font.render("Earth: 365 ≈ 365.2422 yields 6585.3 match.", True, WHITE)
     screen.blit(caption, (10, height - 180))
-    caption2 = font.render("Counterfactual: 5000 days yields 500 years.", True, WHITE)
+    caption2 = font.render("Counterfactual: 51 ≠ 510 breaks scalar at 500.", True, WHITE)
     screen.blit(caption2, (10, height - 150))
-    caption3 = font.render("A single rotation disproves universality.", True, WHITE)
+    caption3 = font.render("A single rotation reveals the fluke.", True, WHITE)
     screen.blit(caption3, (10, height - 120))
-    caption4 = font.render("Mathematics, it seems, has other plans.", True, WHITE)
+    caption4 = font.render("Mathematics shrugs, unimpressed.", True, WHITE)
     screen.blit(caption4, (10, height - 90))
-    caption5 = small_font.render("Note: Earth’s harmony is but a fluke.", True, WHITE)
+    caption5 = small_font.render("Note: Earth’s luck is not a law.", True, WHITE)
     screen.blit(caption5, (10, height - 60))
-    caption6 = small_font.render("The cosmos remains unimpressed.", True, WHITE)
+    caption6 = small_font.render("The cosmos carries on regardless.", True, WHITE)
     screen.blit(caption6, (10, height - 30))
 
     pygame.display.flip()

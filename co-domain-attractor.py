@@ -1,5 +1,4 @@
-
-# dual-clock.py - Constrasts Earth’s scalar match with the counterfactual’s failure, using two clocks and Fourier insets.
+# co-domain-attractory.py - Visualization highlighting resonance-like behavior of the co-domain attractor.
 __author__ = 'Forest Mars'
 __version__ = '1.0.0' 
 __all__ = []
@@ -11,7 +10,7 @@ import numpy as np
 pygame.init()
 width, height = 800, 600
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Cosmic Clocks: A Hypothesis Undone")
+pygame.display.set_caption("Cosmic Clocks: Co-Domain Attractor and Shared Scalar")
 clock = pygame.time.Clock()
 
 WHITE = (255, 255, 255)
@@ -155,17 +154,17 @@ while running:
     time_years = time_days / SOLAR_YEAR
     text = font.render(f"Time: {time_years:.1f} Earth years", True, WHITE)
     screen.blit(text, (10, 10))
-    caption = font.render("Earth: Scalar match at 6585.3 days and years.", True, WHITE)
+    caption = font.render("Earth: N=365 ≈ Y=365.2422 yields shared scalar", True, WHITE)
     screen.blit(caption, (10, height - 180))
-    caption2 = font.render("Counterfactual: 5000 days yields 500 years.", True, WHITE)
+    caption2 = font.render("6585.3 in co-domain attractor.", True, WHITE)
     screen.blit(caption2, (10, height - 150))
-    caption3 = font.render("A single rotation disproves universality.", True, WHITE)
+    caption3 = font.render("Counterfactual: N=51 ≠ Y=510 breaks scalar", True, WHITE)
     screen.blit(caption3, (10, height - 120))
-    caption4 = font.render("Mathematics, it seems, has other plans.", True, WHITE)
+    caption4 = font.render("at 500, outside co-domain attractor.", True, WHITE)
     screen.blit(caption4, (10, height - 90))
-    caption5 = small_font.render("Note: Earth’s harmony is but a fluke.", True, WHITE)
+    caption5 = small_font.render("Note: Convergence is a numerical quirk.", True, WHITE)
     screen.blit(caption5, (10, height - 60))
-    caption6 = small_font.render("The cosmos remains unimpressed.", True, WHITE)
+    caption6 = small_font.render("The cosmos remains indifferent.", True, WHITE)
     screen.blit(caption6, (10, height - 30))
 
     pygame.display.flip()
